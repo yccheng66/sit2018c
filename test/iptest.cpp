@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "innerProduct.h"
+#include "../innerProduct.h"
 
 int main(int argc, char ** argv) {
    testing :: InitGoogleTest( &argc , argv ) ;
