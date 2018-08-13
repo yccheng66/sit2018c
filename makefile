@@ -1,7 +1,7 @@
-all: hello
+all: bin/hello
 
-hello: hello.cpp
-	g++ hello.cpp -o hello
+bin/hello: hello.cpp
+	g++ hello.cpp -o bin/hello
 
 clean:
-	rm hello
+	rm bin/hello
