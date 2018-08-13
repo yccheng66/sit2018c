@@ -76,7 +76,7 @@ The problem is to build a console application _hello_ that asks the user to type
 - (Eng) refactoring: extract function to cut duplicated code
 - (Lan) call by value (pointer) and call by reference
   - digress: exchange
-- (Lan) C++ array for better dimension handling
+- (Lan) C++ vector for better dimension handling
   - template
   - template function
   - exception handling
