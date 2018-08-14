@@ -55,11 +55,13 @@ TEST(triangleTest, sortTriangle){
   std::vector<std::vector<int>> t3 = {a,f,g};
 
   std::vector<std::vector<std::vector<int>>> triangle = {t3,t1,t2};
-  // std::sort()
+  std::sort(triangle.begin(),triangle.end(),[](
+  std::vector<std::vector<int>> x, std::vector<std::vector<int>> y)
+    {return computeArea(x) < computeArea(y);});
 
-  // ASSERT_EQ(t1,triangle[0]);
-  // ASSERT_EQ(t2,triangle[1]);
-  // ASSERT_EQ(t3,triangle[2]);
+   ASSERT_EQ(t1,triangle[0]);
+   ASSERT_EQ(t2,triangle[1]);
+   ASSERT_EQ(t3,triangle[2]);
 }
 
 TEST (SortingTest, Ints) {
@@ -92,7 +94,8 @@ TEST (SortingTest, IntsDescLambda) {
 
 TEST (SortingTest, IntsDescLambdaDistToSeven) {
   std::vector<int> v = {12,7,80,1,0};
-  std::sort(v.begin(),v.end(),[](int x,int y){return abs(x-7) > abs(y-7);});
+  int base = v[1];
+  std::sort(v.begin(),v.end(),[base](int x,int y){return abs(x-base) > abs(y-base);});
   ASSERT_EQ(80,v[0]);
   ASSERT_EQ(0,v[1]);
   ASSERT_EQ(1,v[2]);
