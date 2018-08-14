@@ -1,5 +1,6 @@
 #include <vector>
 #include <math.h>
+#include "shape.h"
 
 double vectorLength(std::vector<int> v){
   return sqrt(v[0] * v[0] + v[1] *v[1]);
@@ -20,7 +21,7 @@ double computeArea(std::vector<std::vector<int>> t)
 
 }
 
-class Triangle {
+class Triangle : public Shape {
 public:
   Triangle(std::vector<int> a, std::vector<int> b, std::vector<int> c){
     _a = a; _b = b; _c = c;
