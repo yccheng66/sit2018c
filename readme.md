@@ -79,11 +79,24 @@ The problem is to build a console application _hello_ that asks the user to type
 - (Lan) C++ vector for better dimension handling
   - template
   - template function
-  - exception handling
-  - angle between two vectors
+- (Lan) exception handling
+  - replace return code with exception
+  - the main program for inner product
+
+
+# Problem 3
+
+   In the plane, a point is described by a 2d vector. Given any three points, a triangle is determined. Given n triangles that are inside an STL container, sort them by their areas in the ascending order.
+
+## Tasks (HTSI - plans)
+- (Lan) Area of a triangle:
+  - C function
+    - length of a vector
+    - difference of two vectors: operator overloading
+  - (Lan) C++ object: triangle
+    - data and function together
+    - constructor/destructor
 - (Lan) C++ Standard template library
   - algorithms: sorting, searching, ...  
   - containers: array, list, vector, map, ...
-- (Lan) C++ object: triangle
-  - data and function together
-  - constructor/destructor
+  - lambda: anonymous callback function used by the stl algorithms
