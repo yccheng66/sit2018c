@@ -102,3 +102,25 @@ TEST (SortingTest, IntsDescLambdaDistToSeven) {
   ASSERT_EQ(12,v[3]);
   ASSERT_EQ(7,v[4]);
 }
+
+TEST(triangleTest,objectVersion){
+  std::vector<int> a = {0,0};
+  std::vector<int> b = {1,0};
+  std::vector<int> c = {1,1};
+  std::vector<int> d = {2,0};
+  std::vector<int> e = {2,2};
+  std::vector<int> f = {3,0};
+  std::vector<int> g = {3,3};
+
+  Triangle t1 (a,b,c);
+  Triangle t2 (a,d,e);
+  Triangle t3 (a,f,g);
+
+  std::vector<Triangle> triangles = {t3,t1,t2};
+  std::sort(triangles.begin(),triangles.end(),[](Triangle a, Triangle b)
+  {return a.area() < b.area();});
+
+  ASSERT_EQ(t1,triangles[0]);
+  ASSERT_EQ(t2,triangles[1]);
+  ASSERT_EQ(t3,triangles[2]);
+}
