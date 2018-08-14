@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../innerProduct.h"
+#include "../src/innerProduct.h"
 #include <vector>
 
 int main(int argc, char ** argv) {
