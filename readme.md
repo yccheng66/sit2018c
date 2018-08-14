@@ -100,3 +100,9 @@ The problem is to build a console application _hello_ that asks the user to type
   - algorithms: sorting, searching, ...  
   - containers: array, list, vector, map, ...
   - lambda: anonymous callback function used by the stl algorithms
+- (Lan) Polymorphism
+  - base class - derived class
+  - pure virtual member functions area() in base class Shape
+  - overriding area in Triangle and Circle
+  - vector of pointer to Shape
+  - sorting shapes by area
